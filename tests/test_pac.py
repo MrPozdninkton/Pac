@@ -96,5 +96,13 @@ class TestCase(unittest.TestCase):
         ### TODO: Add other moods.
 
 
+    def test_reverse_complement(self):
+        """Test that two lists are equal."""
+
+        forward = "ACTG"
+        expected = "CAGT"
+        result=reverse_complement(forward)
+        self.assertEqual(result, expected)
+
 if __name__ == "__main__":
     unittest.main()
