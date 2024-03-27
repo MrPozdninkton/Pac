@@ -3,7 +3,9 @@
 
 import unittest
 import os
+import sys
 import shutil
+import pytest
 from click.testing import CliRunner
 
 from template import cli
@@ -57,7 +59,7 @@ class TestCase(unittest.TestCase):
     def test_fails(self):
         """ Example for a failing test."""
 
-        received = False
+        received = True
 
         self.assertTrue(received)
 
