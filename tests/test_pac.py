@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Tests for `template` package."""
+"""Tests for `pac` package."""
 
 import unittest
 import os
@@ -8,8 +8,8 @@ import shutil
 import pytest
 from click.testing import CliRunner
 
-from template import cli
-from template.template import greeting
+from pac import cli
+from pac.pac import greeting
 
 
 class TestCase(unittest.TestCase):
@@ -77,7 +77,7 @@ class TestCase(unittest.TestCase):
         result = runner.invoke(cli.main)
 
         self.assertEqual(result.exit_code, 0)
-        self.assertIn('python-template-package', result.output)
+        self.assertIn('python-pac-package', result.output)
 
         help_result = runner.invoke(cli.main, ['--help'])
         self.assertEqual(help_result.exit_code, 0)

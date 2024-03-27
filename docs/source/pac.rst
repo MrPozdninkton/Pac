@@ -1,7 +1,7 @@
 ----------------
-template package
+pac package
 ----------------
 
-.. automodule:: template
+.. automodule:: pac
    :members:
 
