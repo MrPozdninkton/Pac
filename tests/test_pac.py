@@ -3,9 +3,7 @@
 
 import unittest
 import os
-import sys
 import shutil
-import pytest
 from click.testing import CliRunner
 
 from pac import cli
@@ -88,7 +86,7 @@ class TestCase(unittest.TestCase):
 
         forward = "ACTG"
         expected = "CAGT".lower()
-        result=reverse_complement(forward)
+        result = reverse_complement(forward)
         self.assertEqual(result, expected)
 
     def test_reverse_complement_input_type(self):
@@ -96,7 +94,7 @@ class TestCase(unittest.TestCase):
 
         forward = 12346
         expected = None
-        result=reverse_complement(forward)
+        result = reverse_complement(forward)
         self.assertEqual(result, expected)
 
     def test_reverse_complement_input_value(self):
@@ -104,7 +102,7 @@ class TestCase(unittest.TestCase):
 
         forward = "dfgtcsa"
         expected = None
-        result=reverse_complement(forward)
+        result = reverse_complement(forward)
         self.assertEqual(result, expected)
 
 
