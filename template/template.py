@@ -21,7 +21,7 @@ def greeting(mood=None) -> None:
     elif mood == "good":
         greeting = "Hi, what's up?"
 
-    elif moood == "formal":
+    elif mood == "formal":
         greeting = "Good day, how are you today?"
 
     else:
