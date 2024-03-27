@@ -1,5 +1,6 @@
 """Main module."""
 
+
 def greeting(mood=None) -> None:
     """
     greeting(mood): Print a greeting depending on the mood.
@@ -28,6 +29,4 @@ def greeting(mood=None) -> None:
 
     print(greeting)
 
-    return(greeting)
-
-
+    return greeting
