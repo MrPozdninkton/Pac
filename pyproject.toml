@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "python-pac-package"
-version = "0.0.1"
+version = "0.0.2"
 homepage = "https://github.com/mpievolbio-scicomp/python-pac-package"
 description = "Python package pac with MPI Evolutionary Biology branding.."
 authors = ["Max Planck Institute for Evolutionary Biology - Scientific Computing Services <computing@evolbio.mpg.de>"]
