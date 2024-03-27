@@ -1,32 +1,35 @@
 """Main module."""
 
-
-def greeting(mood=None) -> None:
+def reverse_complement(forward):
     """
-    greeting(mood): Print a greeting depending on the mood.
+    reverse_comlement(forward): Print reverse complement of the forward
 
     Parameters
     ----------
-    mood : str, optional
-           The mood of the greeting.
-
+    forward : str
+           Forward sequence
+ 
     """
+    if type(forward) != str:
+        print("ERROR: wrong type")
+        return None
+    a = forward.lower().count("a")
+    t = forward.lower().count("t")
+    g = forward.lower().count("g")
+    c = forward.lower().count("c")
+    if a+t+g+c != len(forward):
+        print("ERROR: wrong value(s)")
+        return None
+    complement = ""    
+    reverse = forward[::-1]
+    if i in reverse == "a":
+        complement += "t"
+    elif i in reverse == "t":
+        complement += "a"
+    elif i in reverse == "g":
+        complement += "c"
+    elif i in reverse == "c":
+        complement += "g"
+    print(complement)
+    return complement
 
-    if mood is None:
-        greeting = "Hallo!"
-
-    elif mood == "sad":
-        greeting = "How are you? I'm sad."
-
-    elif mood == "good":
-        greeting = "Hi, what's up?"
-
-    elif mood == "formal":
-        greeting = "Good day, how are you today?"
-
-    else:
-        greeting == "I did not get that."
-
-    print(greeting)
-
-    return greeting
