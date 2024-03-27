@@ -6,16 +6,16 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Python Template Package'
+project = 'Python Pac Package'
 copyright = '2024, Max Planck Institute for Evolutionary Biology'
 author = 'Max Planck'
 version = "0.0.1"
 
 import sys
 
-sys.path.insert(0, '../../template')
+sys.path.insert(0, '../../pac')
 
-import template
+import pac
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -26,7 +26,7 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.napoleon',
               ]
 
-templates_path = ['_templates']
+pacs_path = ['_pacs']
 exclude_patterns = []
 
 source_suffix = ['.rst', '.md']
