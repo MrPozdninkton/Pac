@@ -1,3 +1,0 @@
-# Enter packages needed at runtime. One package per line. Version numbers are optional
-# E.g. 
-# numpy>=12.0
