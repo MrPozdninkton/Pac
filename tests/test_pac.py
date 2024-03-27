@@ -9,7 +9,7 @@ import pytest
 from click.testing import CliRunner
 
 from pac import cli
-from pac.pac import greeting
+from pac.pac import reverse_complement
 
 
 class TestCase(unittest.TestCase):
@@ -83,19 +83,6 @@ class TestCase(unittest.TestCase):
         self.assertEqual(help_result.exit_code, 0)
         self.assertIn('--help  Show this message and exit.', help_result.output)
 
-    def test_greeting(self):
-        """Test the greeting function."""
-
-        mood = "sad"
-
-        greet = greeting(mood)
-        expected = "How are you? I'm sad."
-
-        self.assertEqual(greet, expected)
-
-        ### TODO: Add other moods.
-
-
     def test_reverse_complement(self):
         """Test that two lists are equal."""
 
@@ -103,6 +90,23 @@ class TestCase(unittest.TestCase):
         expected = "CAGT"
         result=reverse_complement(forward)
         self.assertEqual(result, expected)
+
+    def test_reverse_complement_input_type(self):
+        """Test that reverse_complement works with strings only"""
+
+        forward = 12346
+        expected = None
+        result=reverse_complement(forward)
+        self.assertEqual(result, expected)
+
+    def test_reverse_complement_input_value(self):
+        """Test that reverse_complement works with a DNA sequence"""
+
+        forward = "dfgtcsa"
+        expected = None
+        result=reverse_complement(forward)
+        self.assertEqual(result, expected)
+
 
 if __name__ == "__main__":
     unittest.main()
