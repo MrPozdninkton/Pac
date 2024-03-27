@@ -87,7 +87,7 @@ class TestCase(unittest.TestCase):
         """Test that two lists are equal."""
 
         forward = "ACTG"
-        expected = "CAGT"
+        expected = "CAGT".lower()
         result=reverse_complement(forward)
         self.assertEqual(result, expected)
 
