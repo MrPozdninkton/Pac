@@ -21,15 +21,16 @@ def reverse_complement(forward):
         print("ERROR: wrong value(s)")
         return None
     complement = ""    
-    reverse = forward[::-1]
-    if i in reverse == "a":
-        complement += "t"
-    elif i in reverse == "t":
-        complement += "a"
-    elif i in reverse == "g":
-        complement += "c"
-    elif i in reverse == "c":
-        complement += "g"
+    reverse = forward[::-1].lower()
+    for i in reverse:
+        if i == "a":
+            complement += "t"
+        elif i == "t":
+            complement += "a"
+        elif i == "g":
+            complement += "c"
+        elif i == "c":
+            complement += "g"
     print(complement)
     return complement
 
